@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import SmoothScroll from "@/components/SmoothScroll";
 import Scene from "@/components/canvas/Scene";
+import Nav from "@/components/sections/Nav";
+import Hero from "@/components/sections/Hero";
 
 function detectMode() {
   if (typeof window === "undefined") {
@@ -36,9 +38,10 @@ export default function HomeExperience() {
   return (
     <SmoothScroll>
       {mode === "full" && <Scene />}
+      <Nav />
       <main className="relative z-10">
-        <h1 className="font-display p-8 text-4xl font-bold">GALLERY OF CODE</h1>
-        <div className="h-[200vh]" />
+        <Hero />
+        <div className="h-[100vh]" />
       </main>
     </SmoothScroll>
   );
