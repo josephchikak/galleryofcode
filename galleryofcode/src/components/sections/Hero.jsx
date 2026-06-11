@@ -33,16 +33,11 @@ export default function Hero() {
           SOLUTIONS AT THE INTERSECTION OF TECHNOLOGY, DESIGN AND SOCIETY.
         </p>
         <h1 className="font-display font-bold leading-[0.92] tracking-tight">
-          {LINES.map((line) => (
+          {LINES.map((line, i) => (
             <span key={line} className="block overflow-hidden">
               <span className="hero-line block text-[13vw] md:text-[9.5vw]">
-                {line === "SYSTEMS" ? (
-                  <>
-                    SYSTEMS<span className="text-accent">.</span>
-                  </>
-                ) : (
-                  line
-                )}
+                {line}
+                {i === LINES.length - 1 && <span className="text-accent">.</span>}
               </span>
             </span>
           ))}
