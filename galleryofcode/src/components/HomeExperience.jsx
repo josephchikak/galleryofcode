@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import SmoothScroll from "@/components/SmoothScroll";
+import Scene from "@/components/canvas/Scene";
 
 function detectMode() {
   if (typeof window === "undefined") {
@@ -34,9 +35,10 @@ export default function HomeExperience() {
 
   return (
     <SmoothScroll>
+      {mode === "full" && <Scene />}
       <main className="relative z-10">
         <h1 className="font-display p-8 text-4xl font-bold">GALLERY OF CODE</h1>
-        <p className="p-8 font-mono text-accent">mode: {mode ?? "detecting"}</p>
+        <div className="h-[200vh]" />
       </main>
     </SmoothScroll>
   );
