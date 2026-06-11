@@ -9,6 +9,9 @@ import Manifesto from "@/components/sections/Manifesto";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ProjectListFallback from "@/components/sections/ProjectListFallback";
 import Capabilities from "@/components/sections/Capabilities";
+import Partners from "@/components/sections/Partners";
+import FoundingStory from "@/components/sections/FoundingStory";
+import Testimonials from "@/components/sections/Testimonials";
 import Footer from "@/components/sections/Footer";
 
 function detectMode() {
@@ -50,6 +53,9 @@ export default function HomeExperience() {
         {mode === "full" && <ProjectsSection />}
         {mode === "fallback" && <ProjectListFallback />}
         <Capabilities />
+        <Partners />
+        <FoundingStory />
+        <Testimonials />
         <Footer />
       </main>
     </SmoothScroll>
