@@ -2,6 +2,7 @@
 
 import { Canvas } from "@react-three/fiber";
 import Particles from "@/components/canvas/Particles";
+import Corridor from "@/components/canvas/Corridor";
 
 export default function Scene() {
   return (
@@ -14,6 +15,7 @@ export default function Scene() {
         <color attach="background" args={["#0a0f0a"]} />
         <fog attach="fog" args={["#0a0f0a", 8, 26]} />
         <Particles />
+        <Corridor />
       </Canvas>
     </div>
   );

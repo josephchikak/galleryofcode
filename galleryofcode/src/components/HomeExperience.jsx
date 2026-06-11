@@ -6,6 +6,7 @@ import Scene from "@/components/canvas/Scene";
 import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
 import Manifesto from "@/components/sections/Manifesto";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 
 function detectMode() {
   if (typeof window === "undefined") {
@@ -43,6 +44,7 @@ export default function HomeExperience() {
       <main className="relative z-10">
         <Hero />
         <Manifesto />
+        {mode !== "fallback" && <ProjectsSection />}
       </main>
     </SmoothScroll>
   );
