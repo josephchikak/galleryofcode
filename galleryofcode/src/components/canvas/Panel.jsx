@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useRouter } from "next/navigation";
 import * as THREE from "three";
@@ -13,6 +13,11 @@ export default function Panel({ project, position, rotationY }) {
   const material = useRef();
   const [hovered, setHovered] = useState(false);
   const router = useRouter();
+
+  // Reset the cursor if the panel unmounts mid-hover
+  useEffect(() => () => {
+    document.body.style.cursor = "auto";
+  }, []);
 
   const uniforms = useMemo(
     () => ({
@@ -67,6 +72,7 @@ export default function Panel({ project, position, rotationY }) {
         fragmentShader={fragmentShader}
         uniforms={uniforms}
         transparent
+        depthWrite={false}
       />
     </mesh>
   );

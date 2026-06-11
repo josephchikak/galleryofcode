@@ -8,6 +8,7 @@ import Panel from "./Panel";
 
 const SPACING = 5; // z-distance between panels
 const CAMERA_START_Z = 6; // matches Canvas camera position
+const CORRIDOR_DEPTH = (projects.length - 1) * SPACING; // total camera travel
 
 export default function Corridor() {
   useFrame(({ camera }, delta) => {
@@ -15,9 +16,8 @@ export default function Corridor() {
     // At progress i/(n-1) the camera sits CAMERA_START_Z in front of panel i
     // (panel i is at z = -i * SPACING), so every panel passes through the same
     // on-screen framing in turn.
-    const depth = (projects.length - 1) * SPACING;
     const targetZ = scrollState.corridorActive
-      ? CAMERA_START_Z - scrollState.corridor * depth
+      ? CAMERA_START_Z - scrollState.corridor * CORRIDOR_DEPTH
       : CAMERA_START_Z;
     camera.position.z = THREE.MathUtils.damp(camera.position.z, targetZ, 4, delta);
   });
