@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Scene from "@/components/canvas/Scene";
 import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
+import Manifesto from "@/components/sections/Manifesto";
 
 function detectMode() {
   if (typeof window === "undefined") {
@@ -41,7 +42,7 @@ export default function HomeExperience() {
       <Nav />
       <main className="relative z-10">
         <Hero />
-        <div className="h-[100vh]" />
+        <Manifesto />
       </main>
     </SmoothScroll>
   );
