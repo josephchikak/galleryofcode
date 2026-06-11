@@ -5,20 +5,11 @@ import { gsap, useGSAP } from "@/lib/gsap";
 
 const BLOCKS = [
   {
-    index: "01",
+    index: "",
     heading: "We build what comes next.",
     text: "Gallery of Code is a research and development practice. We take questions that look like science fiction — autonomous infrastructure, post-quantum identity, ambient computing — and engineer them into working systems, years before the market asks for them.",
   },
-  {
-    index: "02",
-    heading: "Technology is culture.",
-    text: "Every system we ship reshapes how people move, decide and belong. We design with that weight in mind — studying how a tool lands in a society before we build it, and instrumenting what it changes after.",
-  },
-  {
-    index: "03",
-    heading: "Research is practice.",
-    text: "We publish our methods, open our datasets and prototype in the open. The lab and the studio are the same room: what we learn in research becomes product discipline, and what breaks in production becomes the next research question.",
-  },
+
 ];
 
 export default function Manifesto() {
@@ -48,6 +39,9 @@ export default function Manifesto() {
 
   return (
     <section id="about" ref={ref} className="relative">
+
+      <h1 className="mb-12 font-mono text-sm tracking-widest text-accent">
+        Transdisciplinary lab merging arts, science, technology</h1>  
       {BLOCKS.map((block) => (
         <div
           key={block.index}

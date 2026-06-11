@@ -46,7 +46,7 @@ export default function HomeExperience() {
       <Nav />
       <main className="relative z-10">
         <Hero />
-        <Manifesto />
+        {/* <Manifesto /> */}
         {mode === "full" && <ProjectsSection />}
         {mode === "fallback" && <ProjectListFallback />}
         <Capabilities />
