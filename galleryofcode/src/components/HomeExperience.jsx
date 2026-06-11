@@ -7,6 +7,8 @@ import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
 import Manifesto from "@/components/sections/Manifesto";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import Capabilities from "@/components/sections/Capabilities";
+import Footer from "@/components/sections/Footer";
 
 function detectMode() {
   if (typeof window === "undefined") {
@@ -45,6 +47,8 @@ export default function HomeExperience() {
         <Hero />
         <Manifesto />
         {mode !== "fallback" && <ProjectsSection />}
+        <Capabilities />
+        <Footer />
       </main>
     </SmoothScroll>
   );
