@@ -32,12 +32,12 @@ export default function Hero() {
           MULTI-DISCIPLINARY TECHNOLOGY INNOVATION, RESEARCH &amp; DEVELOPMENT —
           SOLUTIONS AT THE INTERSECTION OF TECHNOLOGY, DESIGN AND SOCIETY.
         </p>
-        <h1 className="font-display font-bold leading-[0.92] tracking-tight">
+        <h1 className="font-heading font-bold leading-[0.92] tracking-tight">
           {LINES.map((line, i) => (
             <span key={line} className="block overflow-hidden">
               <span className="hero-line block text-[13vw] md:text-[9.5vw]">
                 {line}
-                {i === LINES.length - 1 && <span className="text-accent">.</span>}
+                {i === LINES.length - 1 && <span className="text-primary">.</span>}
               </span>
             </span>
           ))}

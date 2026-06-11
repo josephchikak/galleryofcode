@@ -2,6 +2,7 @@
 
 import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { COLORS } from "@/lib/theme";
 
 const COUNT = 350;
 
@@ -34,7 +35,7 @@ export default function Particles() {
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       <pointsMaterial
-        color="#00ff66"
+        color={COLORS.primary}
         size={0.035}
         sizeAttenuation
         transparent

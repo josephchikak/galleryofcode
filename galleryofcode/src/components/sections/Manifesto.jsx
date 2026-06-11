@@ -40,17 +40,17 @@ export default function Manifesto() {
   return (
     <section id="about" ref={ref} className="relative">
 
-      <h1 className="mb-12 font-mono text-sm tracking-widest text-accent">
+      <h1 className="mb-12 font-mono text-sm tracking-widest text-primary">
         Transdisciplinary lab merging arts, science, technology</h1>  
       {BLOCKS.map((block) => (
         <div
           key={block.index}
           className="manifesto-block mx-auto flex min-h-[80vh] max-w-5xl flex-col justify-center px-6 py-24 md:px-10"
         >
-          <span className="manifesto-reveal mb-6 font-mono text-sm text-accent">
+          <span className="manifesto-reveal mb-6 font-mono text-sm text-primary">
             /{block.index}
           </span>
-          <h2 className="manifesto-reveal font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+          <h2 className="manifesto-reveal font-heading text-4xl font-bold leading-tight tracking-tight md:text-6xl">
             {block.heading}
           </h2>
           <p className="manifesto-reveal mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">

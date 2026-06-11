@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { scrollState } from "@/lib/scrollState";
+import { COLORS } from "@/lib/theme";
 import vertexShader from "./asciiVertex.glsl";
 import fragmentShader from "./asciiFragment.glsl";
 
@@ -43,7 +44,7 @@ export default function AsciiField() {
     uGrid: { value: new THREE.Vector2(COLS, 50) },
     uAtlas: { value: makeCharAtlas() },
     uChars: { value: CHARS.length },
-    uColor: { value: new THREE.Color("#00ff66") },
+    uColor: { value: new THREE.Color(COLORS.primary) },
     uFade: { value: 1 },
   }));
 

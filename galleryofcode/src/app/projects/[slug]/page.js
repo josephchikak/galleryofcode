@@ -27,12 +27,12 @@ export default async function ProjectPage({ params }) {
   return (
     <main className="min-h-screen">
       <nav className="flex items-center justify-between px-6 py-5 md:px-10">
-        <Link href="/" className="font-display text-sm font-bold tracking-widest">
-          GALLERY OF CODE<span className="text-accent">_</span>
+        <Link href="/" className="font-heading text-sm font-bold tracking-widest">
+          GALLERY OF CODE<span className="text-primary">_</span>
         </Link>
         <Link
           href="/#projects"
-          className="font-mono text-xs tracking-wider transition-colors hover:text-accent"
+          className="font-mono text-xs tracking-wider transition-colors hover:text-primary"
         >
           ← ALL PROJECTS
         </Link>
@@ -40,14 +40,14 @@ export default async function ProjectPage({ params }) {
 
       <header className="px-6 pt-16 md:px-10">
         <div className="mx-auto max-w-5xl">
-          <p className="font-mono text-sm text-accent">
+          <p className="font-mono text-sm text-primary">
             {String(index + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
             <span className="mx-3 text-muted">—</span>
             {project.year}
           </p>
-          <h1 className="font-display mt-4 text-5xl font-bold leading-none tracking-tight md:text-8xl">
+          <h1 className="font-heading mt-4 text-5xl font-bold leading-none tracking-tight md:text-8xl">
             {project.title}
-            <span className="text-accent">.</span>
+            <span className="text-primary">.</span>
           </h1>
           <p className="mt-6 font-mono text-xs tracking-wider text-muted">
             {project.disciplines.join(" / ")}
@@ -79,8 +79,8 @@ export default async function ProjectPage({ params }) {
           className="group mx-auto block max-w-5xl px-6 py-20 md:px-10"
         >
           <p className="font-mono text-xs tracking-widest text-muted">NEXT PROJECT</p>
-          <p className="font-display mt-3 text-4xl font-bold tracking-tight transition-colors group-hover:text-accent md:text-6xl">
-            {next.title} <span className="text-accent">→</span>
+          <p className="font-heading mt-3 text-4xl font-bold tracking-tight transition-colors group-hover:text-primary md:text-6xl">
+            {next.title} <span className="text-primary">→</span>
           </p>
         </Link>
       </footer>

@@ -41,18 +41,18 @@ export default function ProjectsSection() {
     >
       <div className="sticky top-0 flex h-screen flex-col justify-between py-24">
         <div className="flex items-baseline justify-between px-6 md:px-10">
-          <h2 className="font-display text-sm font-bold tracking-widest text-muted">
-            SELECTED WORK <span className="text-accent">2019—2026</span>
+          <h2 className="font-heading text-sm font-bold tracking-widest text-muted">
+            SELECTED WORK <span className="text-primary">2019—2026</span>
           </h2>
           <span className="font-mono text-xs text-muted">SCROLL ↓ / CLICK PANEL TO OPEN</span>
         </div>
         <div className="px-6 text-center md:px-10">
-          <div className="font-mono text-sm text-accent">
+          <div className="font-mono text-sm text-primary">
             {String(active + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
             <span className="mx-3 text-muted">—</span>
             {project.year}
           </div>
-          <div className="font-display mt-2 text-3xl font-bold tracking-tight md:text-5xl">
+          <div className="font-heading mt-2 text-3xl font-bold tracking-tight md:text-5xl">
             {project.title}
           </div>
           <div className="mt-3 font-mono text-xs tracking-wider text-muted">
