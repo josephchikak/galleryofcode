@@ -3,8 +3,7 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 
-const LINES = ["AT THE", "AVANT-GARDE", "OF FUTURE", "SYSTEMS"];
-const TICKER = "TECHNOLOGY ✕ DESIGN ✕ SOCIETY ✕ RESEARCH ✕ ";
+const LINES = ["GALLERY", "OF", "CODE"];
 
 export default function Hero() {
   const ref = useRef(null);
@@ -27,7 +26,7 @@ export default function Hero() {
   );
 
   return (
-    <section id="top" ref={ref} className="relative flex min-h-screen flex-col justify-end pb-10">
+    <section id="top" ref={ref} className="relative flex min-h-screen flex-col justify-end pb-24">
       <div className="px-6 md:px-10">
         <p className="hero-meta mb-6 max-w-md font-mono text-xs leading-relaxed tracking-wider text-muted">
           MULTI-DISCIPLINARY TECHNOLOGY INNOVATION, RESEARCH &amp; DEVELOPMENT —
@@ -48,12 +47,6 @@ export default function Hero() {
             </span>
           ))}
         </h1>
-      </div>
-      <div className="mt-10 overflow-hidden border-y border-line py-3">
-        <div className="animate-marquee flex w-max whitespace-nowrap font-mono text-xs tracking-[0.3em] text-muted">
-          <span>{TICKER.repeat(6)}</span>
-          <span>{TICKER.repeat(6)}</span>
-        </div>
       </div>
     </section>
   );
