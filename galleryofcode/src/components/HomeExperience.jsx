@@ -7,6 +7,7 @@ import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
 import Manifesto from "@/components/sections/Manifesto";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import ProjectListFallback from "@/components/sections/ProjectListFallback";
 import Capabilities from "@/components/sections/Capabilities";
 import Footer from "@/components/sections/Footer";
 
@@ -46,7 +47,8 @@ export default function HomeExperience() {
       <main className="relative z-10">
         <Hero />
         <Manifesto />
-        {mode !== "fallback" && <ProjectsSection />}
+        {mode === "full" && <ProjectsSection />}
+        {mode === "fallback" && <ProjectListFallback />}
         <Capabilities />
         <Footer />
       </main>
