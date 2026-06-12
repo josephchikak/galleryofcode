@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { ScrollTrigger } from "@/lib/gsap";
 import SmoothScroll from "@/components/SmoothScroll";
 import Scene from "@/components/canvas/Scene";
 import Nav from "@/components/sections/Nav";
@@ -42,6 +43,25 @@ export default function HomeExperience() {
       setMode(detectMode());
     }
   }, []);
+
+  // The projects section (corridor or fallback list) mounts only after mode
+  // detection, shifting every section below it down by thousands of pixels.
+  // ScrollTrigger measured the page before that, so recalculate positions —
+  // otherwise the scroll reveals fire at the wrong spots (or never).
+  useEffect(() => {
+    if (!mode) return undefined;
+    const raf = requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+      // If the browser restored a scroll position beyond a reveal trigger,
+      // its animation never plays — fast-forward those so content is visible.
+      ScrollTrigger.getAll().forEach((trigger) => {
+        if (trigger.animation && trigger.end < window.scrollY) {
+          trigger.animation.progress(1);
+        }
+      });
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [mode]);
 
   return (
     <SmoothScroll>
