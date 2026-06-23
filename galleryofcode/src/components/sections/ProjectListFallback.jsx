@@ -5,8 +5,11 @@ export default function ProjectListFallback() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-24 md:px-10">
       <h2 className="mb-12 font-mono text-sm tracking-widest text-primary">
-        /SELECTED WORK 2019—2026
+        SELECTED WORK 2019—2026
       </h2>
+      <h1 className="mb-16 font-heading text-4xl leading-tight tracking-tight md:text-6xl">
+        PROJECTS
+      </h1>
       <ul className="flex flex-col gap-6">
         {projects.map((project, i) => (
           <li key={project.slug}>

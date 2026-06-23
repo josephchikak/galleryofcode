@@ -35,7 +35,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" ref={ref} className="mx-auto max-w-5xl px-6 py-32 md:px-10">
       <p className="testimonial-reveal mb-6 font-mono text-sm tracking-widest text-primary">
-        /TESTIMONIALS
+        TESTIMONIALS
       </p>
       <h2 className="testimonial-reveal font-heading max-w-3xl text-4xl leading-tight tracking-tight md:text-6xl">
         What Our Clients And Partners Are Saying

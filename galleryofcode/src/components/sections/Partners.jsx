@@ -32,7 +32,7 @@ export default function Partners() {
   return (
     <section id="partners" ref={ref} className="mx-auto max-w-5xl px-6 py-32 md:px-10">
       <p className="partners-reveal mb-12 font-mono text-sm tracking-widest text-primary">
-        /PARTNERS
+        PARTNERS
       </p>
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <h2 className="partners-reveal font-heading text-[26vw] leading-none text-primary md:text-[12vw]">
